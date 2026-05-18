@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`OrdersPage > coincide con la instantánea 1`] = `"<thead><tr><th>Pedido</th><th>Cliente</th><th>Fecha</th><th>Responsable</th><th>Estado</th><th>Total</th><th>Acciones</th></tr></thead><tbody><tr class="order-row order-row--urgent"><td><button>P-1</button></td><td>Cliente</td><td>02/10/2026</td><td>Yo</td><td><span class="badge">Pendiente</span></td><td class="order-row__total">5445,00&nbsp;€</td><td><button>Aprobar</button></td></tr></tbody>"`;

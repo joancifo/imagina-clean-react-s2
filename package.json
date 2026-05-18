@@ -1,0 +1,50 @@
+{
+  "name": "orderdesk",
+  "private": true,
+  "version": "0.9.0",
+  "type": "module",
+  "description": "Backoffice de pedidos ficticio con code smells sembrados para el curso de Clean Architecture",
+  "scripts": {
+    "dev": "concurrently -n api,web \"node server/index.mjs\" \"vite\"",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "demo:tema1": "vitest run examples/tema1",
+    "map": "node scripts/map-imports.mjs",
+    "hotspots": "node scripts/hotspots.mjs",
+    "cycles": "madge --circular --extensions ts,tsx --ts-config tsconfig.json src",
+    "smells": "eslint src --no-error-on-unmatched-pattern",
+    "deps": "knip --dependencies --no-exit-code"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "classnames": "^2.5.1",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/lodash": "^4.17.13",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^2.1.8",
+    "concurrently": "^9.1.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "jsdom": "^25.0.1",
+    "knip": "^5.41.1",
+    "madge": "^8.0.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8"
+  }
+}
