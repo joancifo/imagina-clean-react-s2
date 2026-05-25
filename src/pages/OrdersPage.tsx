@@ -132,7 +132,7 @@ export default function OrdersPage() {
     <main className="page">
       <h1>Pedidos</h1>
       <div className="filters">
-        <input aria-label="Buscar" placeholder="Buscar" value={filters.text} onChange={(e) => setFilters({ ...filters, text: e.target.value })} />
+        <input aria-label="Buscar cliente o pedido" placeholder="Buscar" value={filters.text} onChange={(e) => setFilters({ ...filters, text: e.target.value })} />
         <select aria-label="Estado" value={filters.status} onChange={(e) => setFilters({ ...filters, status: e.target.value })}>
           <option value="all">Todos</option>
           <option value="pending">Pendientes</option>
