@@ -7,7 +7,7 @@ export function formatCurrency(value: number): string {
 }
 
 export function formatDate(iso: string): string {
-  return moment(iso).format('YYYY-MM-DD');
+  return moment(iso).format('DD/MM/YYYY');
 }
 
 export function calcOrderTotal(order: Order): number {
