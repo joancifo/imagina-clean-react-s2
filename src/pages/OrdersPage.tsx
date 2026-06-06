@@ -63,7 +63,7 @@ export default function OrdersPage() {
   // Primera versión de la regla de cancelación: manager, solo pendientes por debajo de 5000 €.
   const canCancelOrder = (o: Order) => {
     if (user?.usr_role === 'admin') return o.ord_st === 'pending' || o.ord_st === 'approved';
-    if (user?.usr_role === 'manager') return o.ord_st === 'pending' && (o.total ?? 0) < 3000;
+    if (user?.usr_role === 'manager') return o.ord_st === 'pending' && (o.total ?? 0) < 5000;
     return false;
   };
 
