@@ -56,7 +56,7 @@ export default function OrdersPage() {
   // Efecto 5: el aviso desaparece solo.
   useEffect(() => {
     if (!toast) return;
-    const t = setTimeout(() => setToast(null), 5000);
+    const t = setTimeout(() => setToast(null), 3000);
     return () => clearTimeout(t);
   }, [toast]);
 
