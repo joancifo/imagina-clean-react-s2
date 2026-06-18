@@ -15,7 +15,7 @@ export async function doRequest(method: string, url: string, data?: AnyProps) {
     });
     return response.data;
   } catch (error) {
-    alert('Error de red');
+    alert('Error de red: ' + getErrorMessage(error));
     throw error;
   }
 }
