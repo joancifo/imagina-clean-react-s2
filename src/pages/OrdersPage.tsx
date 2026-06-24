@@ -89,7 +89,7 @@ export default function OrdersPage() {
       alert('El pedido tiene líneas no válidas');
       return;
     }
-    if ((order.total ?? 0) > 8000 && user.usr_role !== 'admin') {
+    if ((order.total ?? 0) > 10000 && user.usr_role !== 'admin') {
       alert('Los pedidos de más de 10000 € los aprueba un administrador');
       return;
     }
