@@ -21,7 +21,7 @@ export default function OrderDetailPage() {
   useEffect(() => {
     if (!order) return;
     const sub = order.ln_items.reduce((acc, l) => acc + l.qty * l.unit_prc, 0);
-    const pct = order.cust_tier === 'gold' ? 0.1 : order.cust_tier === 'silver' ? 0.03 : 0;
+    const pct = order.cust_tier === 'gold' ? 0.1 : order.cust_tier === 'silver' ? 0.05 : 0;
     setTotal(sub * (1 - pct) * 1.21);
   }, [order]);
 
