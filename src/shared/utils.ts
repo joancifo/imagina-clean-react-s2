@@ -12,7 +12,7 @@ export function formatDate(iso: string): string {
 
 export function calcOrderTotal(order: Order): number {
   const subtotal = order.ln_items.reduce((acc, l) => acc + l.qty * l.unit_prc, 0);
-  const discount = order.cust_tier === 'gold' ? 0.1 : order.cust_tier === 'silver' ? 0.03 : 0;
+  const discount = order.cust_tier === 'gold' ? 0.1 : order.cust_tier === 'silver' ? 0.05 : 0;
   return subtotal * (1 - discount) * 1.21;
 }
 
