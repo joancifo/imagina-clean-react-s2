@@ -113,7 +113,7 @@ export default function OrdersPage() {
   const handleCancel = async () => {
     if (!reasonFor) return;
     if (reason.trim().length < 10) {
-      alert('Indica un motivo');
+      alert('Indica un motivo de al menos 10 caracteres');
       return;
     }
     setSaving(true);
