@@ -146,6 +146,7 @@ export default function OrdersPage() {
         <select aria-label="Ordenar" value={sortField} onChange={(e) => setSortField(e.target.value)}>
           <option value="crt_ts">Fecha</option>
           <option value="total">Importe</option>
+          <option value="cust_nm">Cliente</option>
         </select>
         <label>
           <input type="checkbox" checked={compact} onChange={(e) => setCompact(e.target.checked)} /> Compacto
