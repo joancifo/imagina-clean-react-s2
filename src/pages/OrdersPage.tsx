@@ -183,7 +183,7 @@ export default function OrdersPage() {
                 isAdmin={user?.usr_role === 'admin'}
                 isManager={user?.usr_role === 'manager'}
                 isCompact={compact}
-                isHighlighted={(o.total ?? 0) > 3000}
+                isHighlighted={o.ord_st === 'pending' && (o.total ?? 0) > 3000}
                 canApprove={o.ord_st === 'pending'}
                 canCancel={canCancelOrder(o)}
                 disabled={saving}
