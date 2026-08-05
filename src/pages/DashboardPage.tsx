@@ -23,7 +23,7 @@ export default function DashboardPage() {
   // Tercera versión de la regla de cancelación.
   const cancellable = rows.filter((r) => {
     if (user?.usr_role === 'admin') return r.status !== 'shipped';
-    return user?.usr_role === 'manager' && r.status === 'pending' && r.total <= 5000;
+    return user?.usr_role === 'manager' && r.status === 'pending' && r.total <= 6000;
   });
 
   return (
