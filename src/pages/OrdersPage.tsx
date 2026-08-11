@@ -50,7 +50,7 @@ export default function OrdersPage() {
     const pending = filteredOrders.filter((o) => o.ord_st === 'pending');
     setPendingCount(pending.length);
     setPendingAmount(pending.reduce((acc, o) => acc + (o.total ?? 0), 0));
-    setUrgentCount(pending.filter((o) => (o.total ?? 0) > 2000).length);
+    setUrgentCount(pending.filter((o) => (o.total ?? 0) > 3000).length);
   }, [filteredOrders]);
 
   // Efecto 5: el aviso desaparece solo.
