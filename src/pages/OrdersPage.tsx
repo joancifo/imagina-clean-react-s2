@@ -104,7 +104,7 @@ export default function OrdersPage() {
       if ((order.total ?? 0) > 4000) navigate('/orders/' + order.ord_id);
     } catch (error) {
       console.error(error);
-      alert('Error');
+      alert('No se pudo aprobar el pedido');
     } finally {
       setSaving(false);
     }
