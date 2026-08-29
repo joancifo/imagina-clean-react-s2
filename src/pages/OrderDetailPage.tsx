@@ -32,7 +32,7 @@ export default function OrderDetailPage() {
 
   const cancel = async () => {
     await doAction(order.ord_id, 'cancel');
-    trackEvent('order_cancelled', { id: order.ord_id });
+    trackEvent('order_cancelled_detail', { id: order.ord_id });
     setToast('Pedido cancelado');
     navigate('/');
   };
