@@ -11,7 +11,7 @@ export async function doRequest(method: string, url: string, data?: AnyProps) {
       method,
       url,
       data,
-      headers: { 'x-user-id': 'u2' },
+      headers: { 'x-user-id': localStorage.getItem('userId') ?? 'u2' },
     });
     return response.data;
   } catch (error) {
