@@ -82,7 +82,7 @@ export default function OrdersPage() {
       return;
     }
     if (order.ord_st !== 'pending') {
-      alert('Este pedido no se puede aprobar');
+      alert('Solo se aprueban pedidos pendientes');
       return;
     }
     if (order.ln_items.length === 0 || order.ln_items.some((l) => l.qty <= 0)) {
