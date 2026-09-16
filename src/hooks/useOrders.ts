@@ -14,7 +14,7 @@ export default function useOrders() {
       .then((data) => {
         setOrders(data.map(mapOrderForTable));
         if (debug) console.table(data);
-        trackEvent('orders_loaded', {});
+        trackEvent('orders_loaded', { count: data.length });
       })
       .finally(() => setLoading(false));
   }, []);
