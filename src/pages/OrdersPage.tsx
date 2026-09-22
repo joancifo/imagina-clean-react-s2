@@ -101,7 +101,7 @@ export default function OrdersPage() {
       updateOrder(updated, order.total);
       trackEvent('order_approved', { id: order.ord_id, total: order.total, role: user.usr_role });
       setToast('Pedido ' + order.ord_id + ' aprobado');
-      if ((order.total ?? 0) > 4000) navigate('/orders/' + order.ord_id);
+      if ((order.total ?? 0) > 5000) navigate('/orders/' + order.ord_id);
     } catch (error) {
       console.error(error);
       alert('No se pudo aprobar el pedido');
