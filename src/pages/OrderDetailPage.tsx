@@ -49,7 +49,7 @@ export default function OrderDetailPage() {
           ))}
         </tbody>
       </table>
-      <p><strong>Total: {formatCurrency(total)}</strong></p>
+      <p><strong>Total con IVA: {formatCurrency(total)}</strong></p>
       {canCancel && <button onClick={cancel}>Cancelar pedido</button>}
     </main>
   );
