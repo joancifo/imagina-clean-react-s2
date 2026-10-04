@@ -26,7 +26,7 @@ export default function OrderRow(props: Props) {
   return (
     <tr className={isHighlighted ? 'order-row order-row--urgent' : 'order-row'} style={{ background: order.rowColor === 'grey' ? '#eee' : undefined }}>
       <td><button onClick={() => onOpen(order.ord_id)}>{order.ord_id}</button></td>
-      <td>{isCompact ? order.cust_nm.slice(0, 20) : order.cust_nm}</td>
+      <td>{isCompact ? order.cust_nm.slice(0, 12) : order.cust_nm}</td>
       {showDate && <td>{formatDate(order.crt_ts)}</td>}
       {showOwner && <td>{ownerName ?? order.owner_id}</td>}
       <td><Badge status={order.ord_st} /></td>
