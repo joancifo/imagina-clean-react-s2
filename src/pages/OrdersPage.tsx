@@ -155,7 +155,7 @@ export default function OrdersPage() {
       <p className="summary">
         {pendingCount} pendientes por {formatCurrency(pendingAmount)}
         {urgentCount > 0 ? ` · ${urgentCount} urgentes` : ''}
-        {user?.usr_role === 'admin' && pendingAmount > 30000 ? ' · Revisar riesgo de crédito' : ''}
+        {user?.usr_role === 'admin' && pendingAmount > 20000 ? ' · Revisar riesgo de crédito' : ''}
       </p>
       {filteredOrders.length === 0 ? (
         <p>{filters.text || filters.status !== 'all' || filters.onlyMine ? 'Sin resultados' : 'Todavía no hay pedidos'}</p>
