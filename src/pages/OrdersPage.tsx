@@ -158,7 +158,7 @@ export default function OrdersPage() {
         {user?.usr_role === 'admin' && pendingAmount > 20000 ? ' · Revisar riesgo de crédito' : ''}
       </p>
       {filteredOrders.length === 0 ? (
-        <p>{filters.text || filters.status !== 'all' || filters.onlyMine ? 'Sin resultados' : 'Todavía no hay pedidos'}</p>
+        <p>{filters.text || filters.status !== 'all' || filters.onlyMine ? 'Sin resultados para estos filtros' : 'Todavía no hay pedidos'}</p>
       ) : (
         <table>
           <thead>
