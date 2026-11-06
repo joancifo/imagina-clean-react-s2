@@ -20,7 +20,7 @@ type Props = {
   onOpen: (id: string) => void;
 };
 
-// 15 props, 9 de ellas booleanas: cada combinación es una variante distinta del componente.
+// 15 props, 10 de ellas booleanas: cada combinación es una variante distinta del componente.
 export default function OrderRow(props: Props) {
   const { order, showTotal, showDate, showOwner, isAdmin, isManager, isCompact, isHighlighted, canApprove, canCancel, disabled, ownerName, onApprove, onCancel, onOpen } = props;
   return (
