@@ -27,6 +27,10 @@ Usuario activo: clave `userId` de `localStorage` (`u1` admin, `u2` manager, `u3`
 | `npm run smells` | Complejidad, tamaño y reglas de hooks (ESLint) |
 | `npm run deps` | Dependencias sin usar (knip) |
 | `npm run hotspots` | Archivos con más commits |
+| `npm run demo:tema3` | Ejemplos SOLID (SRP, OCP, LSP, ISP, DIP) |
+| `npm run demo:tema4` | Núcleo por capas probado sin React, navegador ni red |
+| `npm run lint:arch` | Regla de dependencia entre capas de `src/orders` |
+| `npm run test:arch` | Test que demuestra que las reglas detectan violaciones |
 
 ## Material de la Sesión 1
 - `examples/tema1/` — ejemplos ejecutables del Tema 1
@@ -35,4 +39,14 @@ Usuario activo: clave `userId` de `localStorage` (`u1` admin, `u2` manager, `u3`
 - `docs/proyecto-final.md` — proyecto final evolutivo
 - `.github/copilot-instructions.md` — instrucciones del repositorio para Copilot
 
-Trabaja en una rama propia: `git checkout -b s1/<tu-nombre>`.
+## Material de la Sesión 2
+- `examples/tema3/` — un ejemplo ejecutable por principio SOLID
+- `examples/tema4/` y `src/orders/` — arquitectura por capas: dominio, aplicación, infraestructura, presentación y composición
+- `eslint.architecture.js` — reglas de importación por capa
+- `docs/checklist-pr.md` y `.github/pull_request_template.md` — checklist SOLID para Pull Requests
+- `docs/arquitectura-objetivo.md` — arquitectura objetivo de la feature Pedidos
+- `.github/instructions/` — instrucciones de Copilot por ruta
+- `prompts/sesion-2.md` — prompts de GitHub Copilot
+- `docs/ejercicio-s2.md` — ejercicio de la sesión
+
+Trabaja en una rama propia por sesión: `git checkout -b s2/<tu-nombre>`.

@@ -1,1 +1,1 @@
-{ "entry": ["scripts/*.mjs", "examples/**/*.test.ts"], "project": ["src/**/*.{ts,tsx}", "server/**/*.mjs", "scripts/*.mjs", "examples/**/*.ts"] }
+{ "entry": ["scripts/*.mjs", "examples/**/*.test.{ts,tsx}", "src/**/*.test.{ts,tsx}"], "project": ["src/**/*.{ts,tsx}", "server/**/*.mjs", "scripts/*.mjs", "examples/**/*.{ts,tsx}"] }
