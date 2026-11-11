@@ -10,12 +10,10 @@ const order = (id: string, status: Order['status'], unitPrice: number): Order =>
 
 // Paso 1 · Doble de prueba del puerto: datos fijos, sin red.
 function createFakeOrderReader(orders: Order[]): OrderReader {
-  void orders;
-  throw new Error('Por implementar (ejercicio S2 · Parte B · paso 1)');
+  return { findAll: async () => orders };
 }
 
-// Paso 2 · quita .skip cuando tengas el fake.
-describe.skip('listUrgentOrders', () => {
+describe('listUrgentOrders', () => {
   it('devuelve solo pendientes de más de 3000 € con IVA', async () => {
     const reader = createFakeOrderReader([order('P-1', 'pending', 3000), order('P-2', 'pending', 100), order('P-3', 'approved', 9000)]);
     const result = await listUrgentOrders(reader);

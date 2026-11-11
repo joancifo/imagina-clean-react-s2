@@ -21,8 +21,7 @@ describe('dominio', () => {
   });
 });
 
-// Parte A · quita .skip cuando hayas escrito la regla de la aplicación.
-describe.skip('aplicación', () => {
+describe('aplicación', () => {
   it('no puede importar axios', async () => {
     expect(await errorsFor('src/orders/application/x.ts', "import axios from 'axios';")).toContain('no-restricted-imports');
   });
@@ -34,8 +33,7 @@ describe.skip('aplicación', () => {
   });
 });
 
-// Parte A · quita .skip cuando hayas escrito la regla de la presentación.
-describe.skip('presentación', () => {
+describe('presentación', () => {
   it('no puede importar infraestructura', async () => {
     expect(await errorsFor('src/orders/ui/x.ts', "import { createHttpOrderReader } from '../infrastructure/http-order-reader';")).toContain('no-restricted-imports');
   });

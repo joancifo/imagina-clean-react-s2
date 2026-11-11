@@ -27,15 +27,27 @@ export default tseslint.config(
   },
 
   // APLICACIÓN: solo dominio y sus propios puertos.
-  // TODO (Parte A): files 'src/orders/application/**/*.{ts,tsx}'
-  //   no-restricted-imports → FRAMEWORKS, layer('infrastructure'), layer('ui'), composition
-  //   no-restricted-globals → ...BROWSER_GLOBALS
+  {
+    files: ['src/orders/application/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-imports': ['error', { patterns: [FRAMEWORKS, layer('infrastructure'), layer('ui'), composition] }],
+      'no-restricted-globals': ['error', ...BROWSER_GLOBALS],
+    },
+  },
 
   // INFRAESTRUCTURA: implementa puertos; nunca conoce la presentación.
-  // TODO (Parte A): files 'src/orders/infrastructure/**/*.{ts,tsx}'
-  //   no-restricted-imports → layer('ui'), composition
+  {
+    files: ['src/orders/infrastructure/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-imports': ['error', { patterns: [layer('ui'), composition] }],
+    },
+  },
 
   // PRESENTACIÓN: usa casos de uso y la composición; nunca un adapter concreto.
-  // TODO (Parte A): files 'src/orders/ui/**/*.{ts,tsx}'
-  //   no-restricted-imports → layer('infrastructure') y axios (mensaje: 'La presentación no habla HTTP: usa un caso de uso.')
+  {
+    files: ['src/orders/ui/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-imports': ['error', { patterns: [layer('infrastructure'), { group: ['axios'], message: 'La presentación no habla HTTP: usa un caso de uso.' }] }],
+    },
+  },
 );
